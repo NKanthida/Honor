@@ -1,54 +1,43 @@
 button {
     border-radius: 25px;
-    width: 280px;
-
+    width: 80%;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
     font-size: 1.25em;
     font-weight: 650;
     font-family: inherit;
     background-color: #19a5ca;
-    color : #fff;
+    color: #fff;
     cursor: pointer;
     transition: border-color 0.25s;
+    margin-top: -10px;
 
 }
 
 h2{
     font-size: 2.6em;
-    line-height: 3;
+    line-height: 1.2;
     color: #19A5CA;
-    margin-left: 100px;
-    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .textt {
-    font-size: 1.25rem;
-    font-weight:500;
-    margin-left: 880px;
+    text-align: center;
     color: #19A5CA;
-}
-
-.form-register form{
-    margin: 0;
-    
 }
 
 .text2{
-    font-family: "Prompt", sans-serif;
-    font-size: 1.25rem;
-    font-weight:500;
-    color: #19A5CA;
-    margin-bottom: 8px;
+    text-align: 50px;
 }
 
-.text5{
-    font-family: "Prompt", sans-serif;
-    font-size: 0.85rem;
-    font-weight:400;
-    color: #000000;
-    margin-left: 155px;
-    margin-top: 5px;
+.text5,.text3
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
 input{
@@ -58,16 +47,7 @@ input{
     background-color: transparent;
     outline: none;
     color: #000000;
-    margin-left: center;
-}
-
-.text3{
-    font-family: "Prompt", sans-serif;
-    font-size: 0.8rem;
-    font-weight:450;
-    color: #19A5CA;
-    margin-left: center;
-    
+    margin: 10px 0;
 }
 
 .container-register{
@@ -75,8 +55,12 @@ input{
     height: 600px;
     background-color: white;
     border-radius: 16px;
-    margin-left: center;
-    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 

@@ -53,7 +53,7 @@ const Createaccount = () => {
                 Create Account
             </h2>
             
-            <form onSubmit={handleSubmit} className='form-register'>
+                <form onSubmit={handleSubmit} >
                 <div className='text2'>
                     Name
                 </div>
@@ -88,6 +88,8 @@ const Createaccount = () => {
                 </Link>
                 <div className='error'>{errorMessage && <p>{errorMessage}</p>}</div>
                 </form>
+            
+            
             
             <div className='text5'>Already have an account? 
             <Link to='/' className='text4'> Login</Link> </div>
