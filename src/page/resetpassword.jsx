@@ -2,23 +2,29 @@ import { useState } from 'react';
 import './forgot.css';
 const Resetpassword = () => {
     const [password, setPassword] = useState("");
-    const [Confirmpassword, setConfirmpassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
 
-    const handlepassword = (e) => {
+    const handlePassword = (e) => {
         setPassword(e.target.value);
     };
-    const handleconfirmpassword = (e) => {
-        setConfirmpassword(e.target.value);
+    const handleConfirmPassword = (e) => {
+        setConfirmPassword(e.target.value);
     };
 
     const handlesubmit = (e) => {
-        e.preventDefult();
-        if (password !== Confirmpassword) {
+        e.preventDefault();
+        console.log('Submit button clicked');
+        if (password !== confirmPassword) {
             setErrorMessage('Password and Confirm Password do not match');
-            return;
+            console.log('Error message set');
+        }
+        else{
+            setErrorMessage("");
+            console.log('Password match, error message cleared');
         }
     };
+
     return (
         <div className="container-forgot">
 
@@ -28,10 +34,18 @@ const Resetpassword = () => {
             <br />
 
             <form onSubmit={handlesubmit}>
-                <input type='password' placeholder='New Password' value={password} onChange={handlepassword}></input>
+                <input type='password' 
+                placeholder='New Password' 
+                value={password} 
+                onChange={handlePassword}/>
+
                 <br />
                 <br />
-                <input type='password' placeholder='Confirm Password' value={Confirmpassword} onChange={handleconfirmpassword}></input>
+                <input type='password' 
+                placeholder='Confirm Password' 
+                value={confirmPassword} 
+                onChange={handleConfirmPassword}/>
+
                 <br />
                 <div className='error'>{errorMessage && <p>{errorMessage}</p>}</div>
                 <br />
@@ -39,14 +53,6 @@ const Resetpassword = () => {
                     <button type='submit' >Submit</button>
                 </div>
             </form>
-
-
-
-
-
-
-
-
         </div>
     )
 }

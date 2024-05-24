@@ -32,9 +32,10 @@
 }
 
 .send button{
-    margin-top: 15px;
+    
     width: 200px;
     font-size: 20px;
+    margin-left: 40px;
 }
 
 .text-reset{
@@ -47,3 +48,8 @@
     text-align: center;
 }
 
+.error{
+    color: red !important;
+    font-size: 14px !important;
+    margin-bottom: 15px !important;
+}
